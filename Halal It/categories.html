@@ -1,0 +1,530 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Serif+Display&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+body {margin:0;font-family:'Rozha One'; width: 100%; min-height: 100%}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+    
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  text-decoration: underline;
+  color: black;
+  opacity: 0.3;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+    
+    .topnav img {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    input[type=text] {
+  width: 200px;
+    height: 25px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    background: #EEEEEE;
+    border-radius: 7px;
+    border: none; 
+    margin-top: 10px;
+}
+
+
+input[type=text]:focus {
+  width: 40%;
+}
+    
+
+    
+      .footer {
+        width: 100%;
+        clear: both;
+            position: relative;
+            height: 100px;
+        width: 100%;
+        background-color: darkgray;
+        color: white;
+        text-align: center;
+        word-spacing: 5px;
+        line-height: 30px;
+        padding-top: 7px;
+        
+    }
+    
+    @media screen and (max-width: 600px){
+        .footer{bottom: -2550;}
+    }
+    
+    .footer h {font-size: 30px;
+    color: black;}
+    
+    .footer a{text-decoration: none;
+    color: ghostwhite;}
+    
+    .footer a:hover{color: black;}
+    
+    .footer .fa{
+        font-size: 20px;
+        width: 50px;
+        background: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        
+    }
+    
+     .footer .fa:hover{
+        color: white;
+        opacity: 0.3;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src = "halal..png">
+    <hr>
+  <a href="index.html" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="document.location='categories.html'">Recipes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Korean Recipe</a>
+      <a href="#">Italian recipe</a>
+      <a href="#">Thai recipe</a>
+      <a href="#">Spanish Recipe</a>
+      <a href="#">Mediterranean recipe</a>
+      <a href="#">Vietnamese recipe</a>
+    </div>
+  </div> 
+
+  <a href="trending-now.html">Trending Now</a>
+  <a href="about-us.html">About Us</a>
+  <input type="text" name="search" placeholder="Search..">
+  <a href="account.html" style="float: right">Account</a>
+  <a href="FAQs.html" style="float: right">FAQs</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+    <style>
+        .container{
+            width: 70%;
+            height: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            background-image: url('https://assets.bonappetit.com/photos/63f79c61e1f4511cb9dc2de0/4:5/w_3016,h_3770,c_limit/022323-weeknight-pad-thai-lede.jpg');
+            background-size: cover;
+            background-position: center;
+            
+        }
+        
+        @media screen and (max-width: 600px){
+            .container{
+                width: 130%;
+                height: 450px;
+                margin-left: 60px;
+                margin-top: 40px;
+                background-image: url('https://assets.bonappetit.com/photos/63f79c61e1f4511cb9dc2de0/4:5/w_3016,h_3770,c_limit/022323-weeknight-pad-thai-lede.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        inner{
+            border-style: solid;
+            border-color: white;
+            border-spacing: 10px;
+            width: 95%;
+            min-height: 390px;
+            float: left;
+            margin-left: 23px;
+            margin-top: 30px
+            
+        }
+       
+        .textbox{
+            text-align: center;
+            width: 30%;
+            height: 170px;
+            background-color: white;
+            padding: 35px 5px;
+            position: absolute;
+            margin: 100px 525px 0px;
+            border-radius: 10px;
+            
+        }
+        
+        @media screen and (max-width: 600px){
+            .container>.textbox{
+                text-align: center;
+                width: 50%;
+                height: 190px;
+                background-color: white;
+                padding: 35px 5px;
+                position: absolute;
+                margin: 100px 525px 0px;
+                margin-left: 80px;
+                border-radius: 10px;
+            }
+        }
+        
+        .textbox p{
+            color: lightslategrey;
+            font-family: 'Cormorant garamond';
+        }
+        
+        .textbox a{
+            text-decoration: none;
+            color: steelblue;
+        }
+        
+        .textbox a:hover{
+            opacity: 0.3;
+        }
+        
+        .stickertext h1{
+            font-size: 19px;
+            font-family:'Cormorant garamond';
+            background-color: steelblue;
+            width: 80%;
+            padding: 10px 0px;
+            position: absolute;
+            margin-left: 40px;
+            margin-top: -55px;
+            color: white;
+        }
+        
+        @media screen and (max-width: 600px){
+            .stickertext{
+                margin-left: -10px;
+                
+            }
+            
+            .container{width: 80%}
+            
+            inner{width: 90%}
+        }
+        
+    
+        .card {
+            width: 300px;
+            height: 254px;
+            border-radius: 7px;
+            position: relative;
+            padding: 1.8rem;
+            border: 2px solid #c3c6ce;
+            transition: width 0.5s ease-out;
+            overflow: visible;
+}
+
+        .card-details {
+            color: black;
+            height: 100%;
+            gap: .5em;
+            display: grid;
+            place-content: center;
+}
+
+        .card-button {
+            transform: translate(-50%, 125%);
+            width: 60%;
+            border-radius: 1rem;
+            border: none;
+            background-color: steelblue;
+            color: #fff;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            opacity: 0;
+            transition: 0.3s ease-out;
+            font-family: 'rozha one';
+}
+
+        .text-body {
+            color: black;
+            font-family:'Cormorant garamond';
+            background-color: white;
+            transition: 0.3s ease-out;
+            opacity: 0;
+}
+
+        /*Text*/
+        .text-title {
+            font-size: 1.5em;
+            background-color: white;
+}
+
+        /*Hover*/
+        .card:hover {
+            border-color: gray;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.50);
+}
+
+
+        .card:hover .text-body{
+            opacity: 1;
+        }    
+        .card:hover .card-button {
+            transform: translate(-50%, 50%);
+            opacity: 1;
+}
+        .row{   
+    display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-template-rows: 1fr 2fr 1fr;
+ 	 padding :10px;
+	float:left;
+	display:inline-table;
+	width:100%;
+	text-align:center;
+    margin-left: 125px;
+}
+
+.row:after {
+  display: table;
+  clear: both;
+}
+
+    .column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+text-align: center;
+margin-top: 65px;
+}
+
+    
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+    .row{
+        width: 50%;
+        transform: translate(-9%)
+    }
+        }
+        
+    </style>
+    
+       <h1 style="text-align: center; font-size: 40px">BROWSE BY CATEGORY</h1>
+    
+        
+    <hr>
+ <div class="container">
+
+     <inner></inner>
+        <div class="textbox">
+             <div class="stickertext">
+         <h1>CHECK OUT OUR LATEST RECIPE</h1>
+            </div>
+            <h1>Pad Thai</h1>
+            <p>Although brandy is called for in this simple pad thai dish, you can swap it out for any flavorful ingredients to suit your preferences and pantry</p>
+            <a href="padthai.html">VIEW RECIPE ➤</a>
+        </div>
+    
+     </div>
+
+
+<div class="row">
+    <div class="column">
+      <div class="card" style="background-image: url(https://discovery.cathaypacific.com/wp-content/uploads/2019/10/Hero_XT3S2303.jpg); background-size: cover; background-position: center;">
+  <div class="card-details">
+    <p class="text-title">Korean Cuisine</p>
+    <p class="text-body">Originating from ancient agricultural traditions in Korea and southern Manchuria, as it reflects a complex interaction of the natural environment and different cultural trends.</p>
+  </div>
+        <button class="card-button" onclick="document.location='korean.html'">Browse recipes</button></div>
+    </div>
+    
+     <div class="column">
+      <div class="card" style="background-image: url(https://onhisowntrip.com/wp-content/uploads/2020/08/RACQ.jpg); background-size: cover; background-position: center">
+  <div class="card-details">
+    <p class="text-title">Italian Cuisine</p>
+    <p class="text-body">Italian cuisine includes deeply rooted traditions common to the whole country, as well as all the regional gastronomies, different from each other</p>
+  </div>
+                             <button class="card-button" onclick="document.location='italian.html'">Browse recipes</button></div>
+    </div>
+    
+     <div class="column">
+      <div class="card" style="background-image: url(https://asianinspirations.com.au/wp-content/uploads/2020/02/01_SouthtoNorth_1920x1280.jpg); background-size: cover; background-position: center">
+  <div class="card-details">
+    <p class="text-title">Thai Cuisine</p>
+    <p class="text-body">Thai cooking places emphasis on lightly prepared dishes with strong aromatic components and a spicy edge.</p>
+  </div>
+                             <button class="card-button" onclick="document.location='thai.html'">Browse recipes</button></div>
+    </div>
+    </div>
+      
+    
+    
+      <div class="row">
+    <div class="column">
+ <div class="card" style="background-image: url(https://static.toiimg.com/photo/67092798.cms); background-size: cover; background-position: center">
+    <div class="card-details">
+    <p class="text-title">Spanish Cuisine</p>
+    <p class="text-body">Spanish cuisine consists of the cooking traditions and practices from Spain. It forms the base of many vegetable sauces.</p>
+  </div>
+                             <button class="card-button" onclick="document.location='spanish.html'">Browse recipes</button></div>
+    </div>
+    
+          <div class="column">
+     <div class="card" style="background-image: url(https://static.toiimg.com/photo/84895387.cms); background-size: cover; background-position: center">
+  <div class="card-details">
+    <p class="text-title">Mediterranean Cuisine</p>
+    <p class="text-body">Mediterranean cuisine is the food and methods of preparation used by the people of the Mediterranean Basin.</p>
+  </div>
+                             <button class="card-button" onclick="document.location='mediterranean.html'">Browse recipes</button></div>
+          </div>
+    
+     <div class="column">
+ <div class="card" style="background-image: url(https://res.cloudinary.com/rainforest-cruises/images/c_fill,g_auto/f_auto,q_auto/v1622728130/The-Best-Food-In-Vietnam-Main/The-Best-Food-In-Vietnam-Main.jpg); background-size: cover; background-position: center">
+  <div class="card-details">
+    <p class="text-title">Vietnamese Cuisine</p>
+    <p class="text-body">The distinctive nature of each dish reflects one or more elements (such as nutrients and colors), which are also based around a five-pronged philosophy.</p>
+  </div>
+                             <button class="card-button" onclick="document.location='vietname.html'">Browse recipes</button></div>
+    </div>
+          
+    </div>
+
+     <footer class="footer">
+        <div>
+        <a href="#">Newsletter</a>
+         <a href="#">Subcribe</a>
+        <a href="#">Customer Service</a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        </div>
+    <h>2023 ©Halal It. Pt Ltd</h>
+       
+         <div>
+        <a href="#">PrivacyNotice</a>
+        </div>
+        
+    </footer>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

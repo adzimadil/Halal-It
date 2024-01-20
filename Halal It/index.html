@@ -1,0 +1,2203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Serif+Display&family=Rozha+One&display=swap" rel="stylesheet">
+
+<style>
+body {margin:0;font-family:'Rozha One'; width: 100%; min-height: 100%}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  text-decoration: underline;
+  color: black;
+  opacity: 0.3;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+    
+    .topnav img {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    input[type=text] {
+  width: 200px;
+    height: 25px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    background: #EEEEEE;
+    border-radius: 7px;
+    border: none; 
+    margin-top: 10px;
+    font-family: 'DM serif display'
+}
+
+
+input[type=text]:focus {
+  width: 40%;
+}
+    
+ 
+.container {
+  position: relative;
+  text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+    
+.bg-text {
+  color: black;
+  background: solid;
+    background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  word-spacing: 5px;
+}
+    .pic{
+  height: auto;
+  width:  350px;
+}
+.about{
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text{
+  width: 540px;
+}
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+}
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+.hire{
+  font-size: 18px;
+  background: lightgray;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover{
+  opacity: 0.2;
+}
+ 
+      .footer {
+           clear: both;
+            position: relative;
+            height: 100px;
+        width: 100%;
+        height: 100px;
+        background-color: darkgray;
+        color: white;
+        text-align: center;
+        word-spacing: 5px;
+        line-height: 30px;
+        padding-top: 7px;
+        
+    }
+    
+    .footer h {font-size: 30px;
+    color: black;}
+    
+    .footer a{text-decoration: none;
+    color: ghostwhite;}
+    
+    .footer a:hover{color: black;}
+    
+    .footer .fa{
+        font-size: 20px;
+        width: 50px;
+        background: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        
+    }
+    
+     .footer .fa:hover{
+        color: white;
+        opacity: 0.3;
+    }
+    
+    @media screen and (max-width:600px){
+        .footer{bottom: -8200px}
+       
+    }
+    
+    
+        @media screen and (max-width:600px){
+        .carousel, .cate-cont h2 {
+            width: 600px;
+            
+        }
+    }
+    
+    .subscribe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	width: 100%;
+	height: 350px;
+	border-radius: 10px;
+	box-shadow: 0 4px 20px lightgray;
+    color: black;
+    
+}
+
+
+.subscribe__title {
+	font-weight: bold;
+	font-size: 26px;
+	margin-bottom: 18px;
+}
+
+.subscribe__copy {
+	max-width: 450px;
+	text-align: center;
+}
+
+.form {
+	margin-bottom: 25px;
+}
+
+.form__email {
+	padding: 10px;
+	border-radius: 5px;
+ 	border: 1px solid #CAD3DB;
+	width: 431px;
+	font-size: 18px;
+	color: white;
+    
+}
+
+.form__email:focus {
+	outline: 1px solid #3D9FFF;
+}
+
+
+
+.notice {
+	width: 345px;
+}
+
+    
+    .cate-cont{max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .cate-cont a{
+        text-decoration: none;
+        color: lightgray;
+        font-size: 20px;
+    }
+    
+    .cate-cont a:hover{color: black;}
+    
+    .carousel a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        background-color: black;
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .carousel a:hover{
+        color:black;
+        background-color: lightgray;
+    }
+    
+    .carousel{
+        margin-top: 30px;
+        margin-bottom: 70px;
+        display: grid;
+        grid-auto-flow: column;
+        gap:1.2rem;
+        overflow-y: auto;
+        scroll-behavior: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding: 20px 20px 20px 20px;
+    }
+    
+    .carousel::-webkit-scrollbar{display: none;}
+
+    .card2{
+    scroll-snap-align:start;
+    border-radius: 30px;
+    min-height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1s;
+}
+    .card2:hover{
+       width: 325px;
+    }
+    
+.cate-cont img{
+    width: 100%;
+    border-radius: 10px;
+}
+.cate-cont img:hover{opacity: 0.3;}
+    
+    h2{
+        font-size: 40px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    
+    
+  .u-clearfix:before,
+.u-clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.u-clearfix:after {
+  clear: both;
+}
+
+.u-clearfix {
+  *zoom: 1;
+}
+
+.subtle {
+  color: #aaa;
+}
+
+.card-container {
+    float: left;
+  margin: 25px auto 0;
+  position: relative;
+  width: 692px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, .07);
+  z-index: 1;
+}
+
+    .card:hover{
+        opacity: 0.2;
+    }
+.card-body {
+  display: inline-block;
+  float: left;
+  width: 310px;
+}
+
+.card-number {
+  margin-top: 15px;
+}
+
+.card-circle {
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 22px;
+  font-size: 12px;
+  height: 25px;
+  text-align: center;
+  width: 25px;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: .5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+}
+
+.card-description {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+}
+
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin: 5px 0 20px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.card-read:after {
+  background-color: #b8bddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 75%;
+}
+
+.card-tag {
+  float: right;
+  margin: 5px 0 0;
+}
+
+.card-media {
+  float: right;
+width: 50%;
+}
+
+.card-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1), 0 0 100px 3px rgba(0, 0, 0, .25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
+}
+  
+    .outerdiv
+{
+	width: 100%;
+    min-height: 100vh;
+    background: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerdiv
+{
+	transform: scale(0.9);
+	margin: 1rem;
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-rows: repeat(2,22rem);
+	grid-template-columns: repeat(4,17rem);
+}
+.eachdiv
+{
+	padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: white;
+}
+.div1
+{
+	background: black;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-repeat: no-repeat;
+    background-position-x: 25rem;
+}
+.div2
+{
+	background: grey;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.div3
+{
+	background: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    color: black;
+}
+.div4
+{
+	background: white;
+	grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+}
+.div5
+{
+	background: #18202D;
+	grid-column: 2/4;
+    grid-row: 2/3;
+}
+.userdetails
+{
+	display: flex;
+}
+.imgbox
+{
+	margin-right: 1rem;
+}
+.imgbox img
+{
+	border-radius: 50%;
+	width: 2rem;
+	border: 2px solid #cec5c5;
+}
+.detbox
+{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detbox p
+{
+	margin: 0;
+}
+.detbox .name
+{
+	color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+	color: #49505A;
+}
+.detbox .designation
+{
+	color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+.detbox .designation.dark
+{
+	color: #49505A;
+}
+.review h4
+{
+	font-size: 1.4rem;
+	color: white;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+.review.dark h4{
+	color:#4B5258;
+}
+.review p
+{
+	font-size: 0.95rem;
+    color: white;
+    font-weight: 500;
+    opacity: 80%;
+    line-height: 1.5;
+}
+.review.dark p{
+	color: #0e0e0e;
+}
+.attribution
+{
+	font-size: 1rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
+.attribution a
+{
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.innerdiv
+	{
+		transform: scale(0.7);
+	}
+}
+@media only screen and (max-width: 800px)
+{
+	.innerdiv
+	{
+		transform: scale(0.6);
+	}
+}
+@media only screen and (max-width: 600px)
+{
+	.div1 {
+		background-position-x: 10rem;
+	}
+	.innerdiv
+	{
+		display: flex; 
+		flex-direction: column;
+		transform: scale(1);
+		margin: 2rem;
+		margin-bottom: 5rem;
+	}
+	.attribution
+	{
+		position: relative;
+	}
+}
+    
+.carousel-2{
+    margin: 5px;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    position: relative;
+    box-shadow: border-box;
+
+}
+   
+    
+.carousel-container{
+    white-space: nowrap;
+    padding-bottom: 10px;
+    
+}
+
+.carousel-item{
+background-color: #fff;
+width: 700px;
+padding-bottom: 45px;
+height: 350px;
+border-radius: 20px;
+overflow: hidden; 
+margin-right: 10px;
+display: inline-block;
+cursor: pointer;
+transition: 450ms all;
+transform-origin: center left;
+position: relative;
+box-shadow: 0 5px 5px 0 rgba (0,0,0, 0.26);
+transition: width 1s;
+}
+    .carousel-item:hover{
+        width: 800px;
+    }
+   .fabs {
+  bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0;
+  z-index: 998;
+  
+}
+
+.fab {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  color: #f0f0f0;
+  margin: 25px auto 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+  z-index: 998;
+  overflow: hidden;
+  background: gray;
+}
+
+.fab > i {
+  font-size: 2em;
+  line-height: 55px;
+  -webkit-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fab:not(:last-child) {
+  width: 0;
+  height: 0;
+  margin: 20px auto 0;
+  opacity: 0;
+  visibility: hidden;
+  line-height: 40px;
+}
+
+.fab:not(:last-child) > i {
+  font-size: 1.4em;
+  line-height: 40px;
+}
+
+.fab:not(:last-child).is-visible {
+  width: 40px;
+  height: 40px;
+  margin: 15px auto 10;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fab:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+  transition-delay: 25ms;
+}
+
+.fab:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
+
+.fab:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.fab:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 60ms;
+  transition-delay: 60ms;
+}
+
+.fab:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+
+.fab(:last-child):active,
+.fab(:last-child):focus,
+.fab(:last-child):hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+}
+/*Chatbox*/
+
+.chat {
+  position: fixed;
+  right: 85px;
+  bottom: 20px;
+  width: 400px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  opacity: 0;
+  box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  -webkit-transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.chat_fullscreen {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+  }
+.chat_header {
+      /* margin: 10px; */
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: white;
+    height: 55px;
+    background: grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 8px;
+}
+.chat_header2 {
+      /* margin: 10px; */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.chat_header .span {
+  float:right;
+}
+
+.chat_fullscreen_loader {
+  display: none;
+    float: right;
+    cursor: pointer;
+    /* margin: 10px; */
+    font-size: 20px;
+    opacity: 0.5;
+    /* padding: 20px; */
+    margin: -10px 10px;
+}
+
+.chat.is-visible {
+  opacity: 1;
+  -webkit-animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+  animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+}
+.is-hide{
+  opacity: 0
+}
+
+.chat_option {
+  float: left;
+  font-size: 15px;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: relative;
+  margin-right: 10px;
+      letter-spacing: 0.5px;
+      font-weight: 400
+}
+
+
+.chat_option img {
+    border-radius: 50%;
+    width: 55px;
+    float: left;
+    margin: -30px 20px 10px 20px;
+    border: 4px solid rgba(0, 0, 0, 0.21);
+}
+
+.change_img img{
+    width: 35px;
+    margin: 0px 20px 0px 20px;
+}
+.chat_option .agent {
+  font-size: 12px;
+    font-weight: 300;
+}
+.chat_option .online{
+      opacity: 0.4;
+    font-size: 11px;
+    font-weight: 300;
+}
+.chat_color {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px;
+  float: left;
+}
+
+
+.chat_body {
+  background: #fff;
+  width: 100%;
+
+  display: inline-block;
+  text-align: center;
+    overflow-y: auto;
+
+}
+#chat_body{
+    height: 450px;
+}
+.chat_login p,.chat_body li, p, a{
+    -webkit-animation: zoomIn .5s cubic-bezier(.42, 0, .58, 1);
+  animation: zoomIn .5s cubic-bezier(.42, 0, .58, 1);
+}
+.chat_body p {
+  padding: 20px;
+  color: #888
+}
+.chat_body a {
+  width: 10%;
+  text-align: center;
+  border: none;
+  box-shadow: none;
+  line-height: 40px;
+  font-size: 15px;
+}
+
+
+
+.chat_field {
+  position: relative;
+  margin: 5px 0 5px 0;
+  width: 50%;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #4b4b4b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+
+.chat_field.chat_message {
+  height: 30px;
+  resize: none;
+      font-size: 13px;
+    font-weight: 400;
+}
+.chat_category{
+  text-align: left;
+}
+
+.chat_category{
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+}
+
+.chat_category ul li{
+    width: 80%;
+    height: 30px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 30px;
+    color: #888;
+    text-align: center;
+}
+
+.chat_category li:hover{
+    background: darkgrey;
+    color: #fff;
+}
+.chat_category li.active{
+    background: darkgrey;
+    color: #fff;
+}
+
+.tags{
+ margin: 20px;
+    bottom: 0px;
+    display: block;
+    width: 120%
+}
+.tags li{
+    padding: 5px 10px;
+    border-radius: 40px;
+    border: 1px solid rgb(3, 117, 208);
+    margin: 5px;
+    display: inline-block;
+    color: rgb(3, 117, 208);
+    cursor: pointer;
+
+}
+.fab_field {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.fab_field2 {
+    bottom: 0px;
+    position: absolute;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+        z-index: 999;
+  }
+
+.fab_field a {
+  display: inline-block;
+  text-align: center;
+}
+
+#fab_camera {
+  float: left;
+  background: rgba(0, 0, 0, 0);
+}
+
+#fab_send {
+  float: right;
+  background: rgba(0, 0, 0, 0);
+}
+
+.fab_field .fab {
+  width: 35px;
+  height: 35px;
+  box-shadow: none;
+  margin: 5px;
+}
+
+.fab_field .fab>i {
+  font-size: 1.6em;
+  line-height: 35px;
+  color: #bbb;
+}
+.fab_field .fab>i:hover {
+  color: gray;
+}
+.chat_conversion {
+
+}
+
+.chat_converse {
+  position: relative;
+    background: #fff;
+    margin: 6px 0 0px 0;
+    height: 300px;
+    min-height: 0;
+    font-size: 12px;
+    line-height: 18px;
+    overflow-y: auto;
+    width: 100%;
+    float: right;
+    padding-bottom: 100px;
+}
+.chat_converse2{
+      height: 100%;
+    max-height: 800px
+}
+.chat_list {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.chat_list .chat_list_item {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.chat .chat_converse .chat_msg_item {
+  position: relative;
+  margin: 8px 0 15px 0;
+  padding: 8px 10px;
+  max-width: 60%;
+  display: block;
+  word-wrap: break-word;
+  border-radius: 3px;
+  -webkit-animation: zoomIn .5s cubic-bezier(.42, 0, .58, 1);
+  animation: zoomIn .5s cubic-bezier(.42, 0, .58, 1);
+  clear: both;
+  z-index: 999;
+}
+.status {
+    margin: 45px -50px 0 0;
+    float: right;
+    font-size: 11px;
+    opacity: 0.3;
+}
+.status2 {
+    margin: -10px 20px 0 0;
+    float: right;
+    display: block;
+    font-size: 11px;
+    opacity: 0.3;
+}
+.chat .chat_converse .chat_msg_item .chat_avatar {
+  position: absolute;
+  top: 0;
+}
+
+.chat .chat_converse .chat_msg_item.chat_msg_item_admin .chat_avatar {
+  left: -52px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.chat .chat_converse .chat_msg_item.chat_msg_item_user .chat_avatar {
+  right: -52px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.chat .chat_converse .chat_msg_item .chat_avatar, .chat_avatar img{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.chat .chat_converse .chat_msg_item.chat_msg_item_admin {
+  margin-left: 60px;
+  float: left;
+  background: rgba(0, 0, 0, 0.03);
+  color: #666;
+}
+
+.chat .chat_converse .chat_msg_item.chat_msg_item_user {
+  margin-right: 20px;
+  float: right;
+  background: darkgray;
+  color: #eceff1;
+}
+
+.chat .chat_converse .chat_msg_item.chat_msg_item_admin:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  z-index: 998;
+  border: 6px solid transparent;
+  border-right-color: rgba(255, 255, 255, .4);
+}
+
+.chat_form .get-notified label{
+    color: gray;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+input {
+  position: relative;
+  width: 90%;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #4b4b4b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  outline: none;
+  background: #fff;
+  display: inline-block;
+  resize: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+.chat_form .get-notified input {
+  margin: 2px 0 0 0;
+  border: 1px solid grey;
+}
+.chat_form .get-notified i {
+    background: grey;
+    width: 30px;
+    height: 32px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 2px 0 0 -30px;
+    position: absolute;
+    border-radius: 3px;
+}
+.chat_form .message_form {
+  margin: 10px 0 0 0;
+}
+.chat_form .message_form input{
+  margin: 5px 0 5px 0;
+  border: 1px solid #e0e0e0;
+}
+.chat_form .message_form textarea{
+  margin: 5px 0 5px 0;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  width: 90%;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #4b4b4b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  outline: none;
+  background: #fff;
+  display: inline-block;
+  resize: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+.chat_form .message_form button{
+    margin: 5px 0 5px 0;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    width: 95%;
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    outline: none;
+    background: #fff;
+    display: inline-block;
+    resize: none;
+    padding: 5px;
+    border-radius: 3px;
+    background: grey;
+    cursor: pointer;
+}
+strong.chat_time {
+  padding: 0 1px 1px 0;
+  font-weight: 500;
+  font-size: 8px;
+  display: block;
+}
+
+/*Chatbox scrollbar*/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  margin: 2px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+/*Element state*/
+
+.is-active {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.is-float {
+  box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+}
+
+.is-loading {
+  display: block;
+  -webkit-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+  animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+}
+/*Animation*/
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 300px) {
+  .chat {
+    width: 250px;
+  }
+}
+/* SMARTPHONES LANDSCAPE */
+
+@media only screen and (min-width: 480px) {
+  .chat {
+    width: 300px;
+  }
+  .chat_field {
+    width: 65%;
+  }
+}
+/* TABLETS PORTRAIT */
+
+@media only screen and (min-width: 768px) {
+  .chat {
+    width: 300px;
+  }
+  .chat_field {
+    width: 65%;
+  }
+}
+/* TABLET LANDSCAPE / DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+  .chat {
+    width: 300px;
+  }
+  .chat_field {
+    width: 65%;
+  }
+}
+
+
+
+
+.ink {
+  display: block;
+  position: absolute;
+  background: rgba(38, 50, 56, 0.4);
+  border-radius: 100%;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  webkit-transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+/*animation effect*/
+
+.ink.animate {
+  -webkit-animation: ripple 0.5s ease-in-out;
+          animation: ripple 0.5s ease-in-out;
+}
+
+@-webkit-keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  
+  100% {
+    opacity: 0;
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    webkit-transform: scale(5);
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }
+}
+
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  
+  100% {
+    opacity: 0;
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    webkit-transform: scale(5);
+    -webkit-transform: scale(5);
+            transform: scale(5);
+  }
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: #bbb;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #bbb;
+}
+ 
+.panel1 {
+position: absolute;
+background-color: transparent;
+display: flex;
+align-items: center;
+flex-flow: column;
+opacity: 1;
+}
+ 
+.carousel-item .info a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+    
+    .carousel-item .info p{
+        font-family: 'copperplate';
+        font-size: 13px;
+        text-decoration: underline;
+    }
+    
+.carousel-item . info .stars{margin-top: -20px;}
+    
+.carousel-item .info .stars i{
+    color: gold;
+    padding: 10px 0;
+    }
+    
+    
+.carousel-item~ .carousel-item{transform: translated (20px, 0,0);}
+        
+.carousel-container: hover .carousel-item:hover{
+    transform: scale(1.09);
+    opacity: 1;
+    }
+    
+.carousel-item_img{
+        width: 100%;
+        height: 210px;
+        object-fit: cover; border-radius: 10px;
+        box-shadow: 0 0.5px 0.5px 0 rgba (0,0,0, 0.26) ;
+    }
+    
+   
+    
+.carousel-2:: -webkit-scrollbar
+    {height: 5px;}
+    
+.carousel-2::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba (0, 0,0, 0. 26); 
+    border-radius: 10px;
+    }
+.carousel-2:: -webkit-scrollbar-track-piece{max-width: 100px;}
+    
+.carousel-2:: -webkit-scrollbar-thumb {
+    border-radius: 20px; 
+    background-color: #fff;
+    background-image:trebrit-gradient(linear, 40% 0%, 75% 84%, from(black), to(lightgray), color-stop(0.6, lightgray)
+        }
+   
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src = "halal..png">
+    <hr>
+  <a href="index.html" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="document.location='categories.html'">Recipes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="korean.html">Korean Recipe</a>
+      <a href="italian.html">Italian recipe</a>
+      <a href="thai.html">Thai recipe</a>
+      <a href="spanish.html">Spanish Recipe</a>
+      <a href="mediterranean.html">Mediterranean recipe</a>
+      <a href="vietname.html">Vietnamese recipe</a>
+    </div>
+  </div> 
+
+  <a href="trending-now.html">Trending Now</a>
+  <a href="about-us.html">About Us</a>
+  <input type="text" name="search" placeholder="Search..">
+  <a href="account.html" style="float: right">Account</a>
+  <a href="FAQs.html" style="float: right">FAQs</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<div class="container" >
+  <img src="https://d2td6mzj4f4e1e.cloudfront.net/wp-content/uploads/sites/9/2020/01/rsz_table_spread__istock-665380564.jpg" style="width: 100%; height: 500px;  filter: blur(1px)">
+  <div class="bg-text">
+      <div style="border: solid black; padding: 20px">
+  <h style="font-size: 20px; font-family: copperplate; color: darkgray;">Hi ! We are Halal It. and we made every recipes possible</h>
+  <h1 style="font-size:55px">Recipes Your Way</h1>
+  <p style="font-family: 'copperplate'; color: darkgrey">We understand your struggle so we bring you Halal It. Here, every food you can think of is prepared halal whether it's an East Asian, South East Asian, or even a European recipe, you name it, we have it</p>
+      </div>
+</div>
+</div>
+  <h1 style="text-align: center; font-size: 45px">What to Cook This Week</h1>
+    <p style="text-align: center; font-family: copperplate; color: darkgrey">RECIPES, GUIDES AND MORE FOR THE WEEK OF MARCH 12TH</p>
+    <hr>
+    <div class="txt" style="line-height: 15px">
+    <h2 style="text-align: left; padding-left: 20px; text-decoration: underline">Hottest Recipes</h2>
+    <h3 style="padding-left: 20px; color: darkgrey; padding-bottom: 20px; font-family: copperplate">Here’s what’s popular on Halal It right now</h3>
+    </div>
+    <div class="carousel-2">
+        <div class="carousel-container" style="width: 100%">
+            
+            
+     <div class="carousel-item">
+            <img class="carousel-item_img" src="https://static.onecms.io/wp-content/uploads/sites/44/2021/05/18/Kimchi-jjigae.jpg">
+                <div class="panel1">
+            <a href="#" class="fa fa-eye" style="text-decoration: none; margin-left: -290px; margin-top: 10px; font-size: 20px; color: black; font"><p style="margin: 0; font-size: 15px; font-family: copperplate">View by 203 user this past week</p></a>
+                    <div class="info">
+                        <h3><a href="kimchijjigae.html">Kimchi Jjigae</a></h3>
+                        <p>It's a warm, hearty, spicy, savory, delicious dish that pretty much everyone loves.</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(5/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+      <div class="carousel-item">
+            <img class="carousel-item_img" src="https://acultivatedliving.com/wp-content/uploads/2020/08/fra-diavolo-seafood-stew-a-cultivated-living-featured.jpg">
+                <div class="panel1">
+            <a href="#" class="fa fa-eye" style="text-decoration: none; margin-left: -370px; margin-top: 10px; font-size: 20px; color: black; font"><p style="margin: 0; font-size: 15px; font-family: copperplate">View by 176 user this past week</p></a>
+                    <div class="info">
+                        <h3><a href="diavolo.html">Shrimp Fra Diavolo</a></h3>
+                        <p>Spicy Italian-American tomato sauce made with crushed red pepper, garlic, and fresh herbs</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.3/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+       <div class="carousel-item">
+            <img class="carousel-item_img" src="https://cdn.vox-cdn.com/thumbor/UZX3wckO-kajnANuRdc2Gdg7fhk=/0x446:6231x3708/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23631297/Saigon_Hustle_Banh_Mi_Trio_1.jpg">
+                <div class="panel1">
+           <a href="#" class="fa fa-eye" style="text-decoration: none; margin-left: -370px; margin-top: 10px; font-size: 20px; color: black; font"><p style="margin: 0; font-size: 15px; font-family: copperplate">View by 154 user this past week</p></a>
+                    <div class="info">
+                        <h3><a href="banhmi.html">Bánh Mì</a></h3>
+                        <p>Is Vietnamese cuisine, bánh mì is a short baguette with thin, crisp crust and soft, airy texture</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.8/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="carousel-item">
+            <img class="carousel-item_img" src="https://www.allrecipes.com/thmb/d_1S6Av48F5LBfP-Z4W8VTD9U4I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/222331-Chef-Johns-Gazpacho-ddmfs-4x3-2781-67624a59fa4c4375b9149d06f6c32348.jpg">
+                <div class="panel1">
+            <a href="#" class="fa fa-eye" style="text-decoration: none; margin-left: -210px; margin-top: 10px; font-size: 20px; color: black; font"><p style="margin: 0; font-size: 15px; font-family: copperplate">View by 129 user this past week</p></a>
+                    <div class="info">
+                        <h3><a href="gazpacho.html">Gazpacho</a></h3>
+                        <p>Gazpacho, is a cold soup and drink made of raw, blended vegetables</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.7/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="carousel-item">
+            <img class="carousel-item_img" src="https://i2.wp.com/chilipeppermadness.com/wp-content/uploads/2021/09/Chorizo-Tacos-SQ.jpg">
+                <div class="panel1">
+           <a href="#" class="fa fa-eye" style="text-decoration: none; margin-left: -140px; margin-top: 10px; font-size: 20px; color: black; font"><p style="margin: 0; font-size: 15px; font-family: copperplate">View by 104 user this past week</p></a>
+                    <div class="info">
+                        <h3><a href="chorizo.html">Chorizo</a></h3>
+                        <p>This spicy Spanish sausage brightens up any supper dish. </p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(5/5)
+                        </div>
+                    </div>
+            </div>
+            </div> 
+        </div>
+    </div>
+    <hr>
+    <div class="cate-cont">
+        <h2 style="padding: 5px; font-family: 'Cormorant Garamond', serif;">BROWSE BY CATEGORIES</h2>
+        <a href="categories.html" style="width: 600px; font-family: 'copperplate'">click to explore more</a>
+        <div class="carousel">
+            <article class="card2">
+                <a href="korean.html">
+            <img src="https://images.deliveryhero.io/image/fd-ph/LH/s0kw-hero.jpg">korean cuisine</a>
+            </article>
+            
+            <article class="card2">
+                <a href="italian.html">
+                    <img src="https://static.stacker.com/s3fs-public/styles/sar_screen_maximum_large/s3/croppedshutterstock1829686103J2Y4jpg_240.JPEG">italian cuisine</a>
+            </article>
+            
+            <article class="card2">
+                <a href="thai.html">
+            <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/08/thai-food.jpg?quality=82&strip=1">thai cuisine</a>
+            </article>
+            
+            <article class="card2">
+                <a href = "spanish.html">
+                    <img src="https://images.ctfassets.net/qr8kennq1pom/5Odp3sElFAGyWkzE2G5TR2/7491b42e521dac513e20e1de13e80ab0/Traditional_and_Unique_food_in_Spain.jpg"> spanish cuisine</a>
+            </article>
+            
+            <article class="card2">
+                <a href="mediterranean.html">
+            <img src="https://static.toiimg.com/photo/84895387.cms">
+                    mediterranean cuisine</a>
+
+            </article>
+            
+            <article class="card2">
+            <a href="vietname.html">
+            <img src="https://images.unsplash.com/photo-1564751200526-dbc0ecaecab9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fHZpZXRuYW0lMjBmb29kfGVufDB8fHx8MTYzNzA3NDkzOQ&ixlib=rb-1.2.1&q=80&w=2000">vietnamese cuisine</a>
+                
+            </article>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div>
+        <h2>Our Favourite Read of The Week</h2>
+        <p style="text-align: center; color: darkgrey; font-family:'Cormorant Garamond', serif; ">We read some, love it and want to share it with you! </p>
+<div class="row" >
+    
+<div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">01</span>
+      <span class="card-author subtle">BY HALOODIES</span>
+      <h2 class="card-title" style="font-size: 35px;">Tips for a Perfect Halal Picnic</h2>
+      <span class="card-description subtle">Don't miss the chance to turn a sunny afternoon into the perfect picnic.</span>
+      <div class="card-read"><a href = "https://haloodies.com/blogs/halal-lifestyle/top-tips-for-a-perfect-halal-picnic" style="text-decoration: none;">Read</a></div>
+      <span class="card-tag card-circle subtle">C</span>
+    </div>
+    <img src="https://cdn.pixabay.com/photo/2015/08/14/13/01/picnic-888398_1280.jpg" style="height: 435px" alt="" class="card-media" />
+  </div>
+  <div class="card-shadow"></div>
+</div>
+    
+    <div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">02</span>
+      <span class="card-author subtle">BY YUMMLY</span>
+      <h2 class="card-title" style="font-size: 35px">A Taste of Ramadan: Recipes for a Holy Month</h2>
+      <span class="card-description subtle">Ramadan’s month of daily fasting is broken only by delicious, nourishing pre-dawn and post-sunset meals</span>
+      <div class="card-read"><a href = "https://www.yummly.com/dish/285112/ramadan-recipes-for-a-holy-month" style="text-decoration: none;">Read</a></div>
+      <span class="card-tag card-circle subtle">C</span>
+    </div>
+    <img src="https://images.unsplash.com/photo-1602363557554-9962442a5c94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80" alt="" class="card-media" />
+  </div>
+  <div class="card-shadow"></div>
+</div>
+
+      <div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">03</span>
+      <span class="card-author subtle">BY EPICURIOUS</span>
+      <h2 class="card-title" style="font-size: 35px">A Busy Cook’s Guide to Eating Well During Ramadan</h2>
+      <span class="card-description subtle">Expert tips and foolproof recipes for iftar and suhoor to set you up for a successful month of fasting.</span>
+      <div class="card-read"><a href = "https://www.epicurious.com/recipes-menus/ramadan-meal-planning" style="text-decoration: none;">Read</a></div>
+      <span class="card-tag card-circle subtle">C</span>
+    </div>
+    <img src="https://images.unsplash.com/photo-1606650368590-11dcf6c7f877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="" class="card-media" />
+  </div>
+  <div class="card-shadow"></div>
+</div>
+    <div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">04</span>
+      <span class="card-author subtle">BY HALOODIES</span>
+      <h2 class="card-title" style="font-size: 35px">How to cook halal chicken, well</h2>
+      <span class="card-description subtle">It’s not the chicken you’ve got, it’s what you do with it. The humble chicken is so versatile that it’s almost synonymous with food itself.</span>
+      <div class="card-read"><a href = "https://haloodies.com/blogs/recipes-and-tips/how-to-cook-halal-chicken-well" style="text-decoration: none;">Read</a></div>
+      <span class="card-tag card-circle subtle">C</span>
+    </div>
+    <img src="https://plus.unsplash.com/premium_photo-1664527009220-c6b203ecfc1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="" class="card-media" />
+  </div>
+  <div class="card-shadow"></div>
+</div>
+    </div>
+    </div>
+    
+    
+    <div class="caro" style="margin-top: 1170px;">
+    <div class="txt" style="line-height: 15px;">
+    <h2 style="text-align: left; padding-left: 20px; text-decoration: underline">Editors' Picks</h2>
+    <h3 style="padding-left: 20px; color: darkgrey; padding-bottom: 20px; font-family: copperplate">Recipes the test kitchen won't stop talking about.</h3>
+    </div>
+    <div class="carousel-2">
+        <div class="carousel-container">
+            
+            
+     <div class="carousel-item">
+            <img class="carousel-item_img" src="https://www.thespruceeats.com/thmb/MmUpNHPVMiNwKpAfEy7W468t2kM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-satay-recipe-3217478-herp-01-0ed36da2f5ba4195a3f022de2b55e7d9.jpg">
+                <div class="panel1">
+            <p style="margin-left: -400px; margin-bottom: -10px; font-size: 15px; border:1px solid black; width: 120px; padding: 5px; border-radius: 7px;"><a href="#" class="fa fa-heart" style="text-decoration: none; color: pink;"></a>Add to favourite</p>
+                    <div class="info">
+                        <h3><a href="moosatay.html">Moo Satay</a></h3>
+                        <p>It's a warm, hearty, spicy, savory, delicious dish that pretty much everyone loves.</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(5/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+      <div class="carousel-item">
+            <img class="carousel-item_img" src="https://simply-delicious-food.com/wp-content/uploads/2020/10/0E2A1651-3.jpg">
+                <div class="panel1">
+           <p style="margin-left: -470px; margin-bottom: -10px; font-size: 15px; border:1px solid black; width: 120px; padding: 5px; border-radius: 7px;"><a href="#" class="fa fa-heart" style="text-decoration: none; color: pink;"></a>Add to favourite</p>
+                    <div class="info">
+                        <h3><a href="paella.html">Seafood Pealla</a></h3>
+                        <p>Spicy Italian-American tomato sauce made with crushed red pepper, garlic, and fresh herbs</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.3/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+       <div class="carousel-item">
+            <img class="carousel-item_img" src="https://cdn.vox-cdn.com/thumbor/UZX3wckO-kajnANuRdc2Gdg7fhk=/0x446:6231x3708/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23631297/Saigon_Hustle_Banh_Mi_Trio_1.jpg">
+                <div class="panel1">
+           <p style="margin-left: -490px; margin-bottom: -10px; font-size: 15px; border:1px solid black; width: 120px; padding: 5px; border-radius: 7px;"><a href="#" class="fa fa-heart" style="text-decoration: none; color: pink;"></a>Add to favourite</p>
+                    <div class="info">
+                        <h3><a href="banhmi.html">Bánh Mì</a></h3>
+                        <p>Is Vietnamese cuisine, bánh mì is a short baguette with thin, crisp crust and soft, airy texture</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.8/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="carousel-item">
+            <img class="carousel-item_img" src="https://live.staticflickr.com/65535/48062582532_43c2cacfb8_k.jpg">
+                <div class="panel1">
+            <p style="margin-left: -315px; margin-bottom: -10px; font-size: 15px; border:1px solid black; width: 120px; padding: 5px; border-radius: 7px;"><a href="#" class="fa fa-heart" style="text-decoration: none; color: pink;"></a>Add to favourite</p>
+                    <div class="info">
+                        <h3><a href="mandu.html">Saeu Mandu</a></h3>
+                        <p>Gazpacho, is a cold soup and drink made of raw, blended vegetables</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(4.7/5)
+                        </div>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="carousel-item">
+            <img class="carousel-item_img" src="https://images.food52.com/OKXP8nfPtgnUgH4PQvpf_PjU4tU=/2016x1344/f0917df7-8286-44ab-b437-e8d0d291e11f--2019-1119_pad-thai_3x2_rocky-luten_003.jpg">
+                <div class="panel1">
+            <p style="margin-left: -430px; margin-bottom: -10px; font-size: 15px; border:1px solid black; width: 120px; padding: 5px; border-radius: 7px;"><a href="#" class="fa fa-heart" style="text-decoration: none; color: pink;"></a>Add to favourite</p>
+                    <div class="info">
+                        <h3><a href="padthai.html">Padthai</a></h3>
+                        <p>Thai noodle stir fry with a sweet-savoury-sour sauce scattered with crushed peanuts</p>
+                        <div class="stars">
+                        <i class="fa fa-star checked"></i>(5/5)
+                        </div>
+                    </div>
+            </div>
+            </div> 
+        </div>
+    </div>
+    </div>
+        
+    <div class="abtsect" style="margin-top: 50px; border: 1.5px solid black; padding: 15px">
+     <div class="about">
+      <img src="https://feedingsouthflorida.org/wp-content/uploads/2020/07/Chef-Lindsay-Autry-scaled.jpg" class="pic">
+      <div class="text">
+        <h2>About Us</h2>
+        <h5 style="font-family: 'Cormorant Garamond', serif;">A vision turn reality, Halal It started in 2023, with a simple mission: enjoying foods without limitation. <br> <br> Join along on our culinary journeys where we'll collect culinary inspiration from around the world and adapt it to make it our own while maintaining the original flavour.</h5>
+        <div class="data">
+        <a href="about-us.html" class="hire">Read More</a>
+        </div>
+      </div>
+    </div>
+    </div>
+ 
+    
+    <div class="outerdiv">
+        <h2>Fresh from our comunity</h2>
+    <div class="innerdiv">
+      <!-- div1 -->
+      <div class="div1 eachdiv">
+        <div class="userdetails">
+            <div class="imgbox">
+            <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jonathan.jpg" alt="">
+          </div>
+          <div class="detbox">
+            <p class="name">Isaac Yap</p>
+            <p class="designation">13 April 2022</p>
+          </div>
+        </div>
+        <div class="review">
+             <h4>This is *chefs kiss* perfection. </h4>
+          <p>“Wow! I followed the instructions exactly and turned out a deep rich stew. I couldn’t be happier with the results. Thank you so much for sharing this with us all. Also, I’ve made a new friend at my local Korean Market. She was so thrilled I was attempting a new type of cuisine at home. Looking forward to discovering other recipes here. Bon Appetite! ”</p>
+            <h4>tried our <a href="kimchijjigae.html" style="text-decoration: none; color: gainsboro">Kimchi Jjigae</a> recipe</h4>
+        </div>
+      </div>
+      <!-- div2 -->
+      <div class="div2 eachdiv">
+        <div class="userdetails">
+          <div class="imgbox">
+            <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jonathan.jpg" alt="">
+          </div>
+          <div class="detbox">
+            <p class="name">Aimy Lee</p>
+            <p class="designation">22 August 2023</p>
+          </div>
+        </div>
+        <div class="review">
+          <h4>Authentic recipe !</h4>
+        <p>“ Some of my friend who have tried this cuisine back in Spain tell me it taste exactly the same ”</p>
+            <h4>tried our <a href="gazpacho.html" style="text-decoration: none; color: black">Gazpacho</a> recipe</h4>
+        </div>
+      </div>
+      <!-- div3 -->
+      <div class="div3 eachdiv">
+        <div class="userdetails">
+          <div class="imgbox">
+            <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-kira.jpg" alt="">
+          </div>
+          <div class="detbox">
+            <p class="name dark">Kira Whittle</p>
+            <p class="designation dark">4 March 2020</p>
+          </div>
+        </div>
+        <div class="review dark">
+           <img src="https://thewoksoflife.com/wp-content/uploads/2020/09/pad-thai-20.jpg" style="width: 100%; margin-top: 3px">
+            <h4>This is *chefs kiss* perfection. </h4>
+          <p>“ Tastes exactly like a Thai food restaurant without being too fishy. I’ve never cooked with tamarind purée before so this was a first but overall the recipe is very easy and clear”</p>
+            <h4>tried our <a href="padthai.html" style="text-decoration: none; color: black">Pad Thai</a> recipe</h4>
+        </div>
+      </div>
+      <!-- div4 -->
+      <div class="div4 eachdiv">
+        <div class="userdetails">
+          <div class="imgbox">
+            <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jeanette.jpg" alt="">
+          </div>
+          <div class="detbox">
+            <p class="name dark">Jeanette Harmon</p>
+            <p class="designation dark">10 December 2020</p>
+          </div>
+        </div>
+        <div class="review dark">
+            <h4>YUMMYYYY !</h4>
+          <p>“I made this for my family and followed your recipe exactly added, muscles and cod pieces. It was really delicious and a fun to make”</p>
+            <h4>tried our <a href="paella.html" style="text-decoration: none; color: black">Seafood Paella</a> recipe</h4>
+        </div>
+      </div>
+      <!-- div5 -->
+      <div class="div5 eachdiv">
+        <div class="userdetails">
+          <div class="imgbox">
+            <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-patrick.jpg" alt="">
+          </div>
+          <div class="detbox">
+            <p class="name">Patrick Abrams</p>
+            <p class="designation">25 August 2021</p>
+          </div>
+        </div>
+        <div class="review">
+           <h4>Delicious !</h4>
+          <p>“I’m of Vietnamese background but more of an expert in eating Viet food (my mum’s) rather than making it 🤣 Anyway, here to vouch for the authentic flavours of this bun cha recipe. This kind of dish is what we often have on warm summer evenings. The nuoc cham in particular is spot on. This is a good base recipe – we often do something similar with vermicelli, herbs, sauce and change the protein to grilled beef or even spring rolls.”</p>
+            <h4>tried our <a href="buncha.html" style="text-decoration: none; color: gainsboro">Buncha </a> recipe</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="fabs">
+  <div class="chat">
+    <div class="chat_header">
+      <div class="chat_option">
+        <span id="chat_head" style="color: white; padding: 20px">Jane Doe</span> <br> <span class="agent" style="color: white; padding: 20px">Customer Service</span> <span class="online" style="color: white; padding: 20px">(Online)</span>
+       <span id="chat_fullscreen_loader" class="chat_fullscreen_loader"><i class="fa fa-window-maximize" style="color: white;"></i></span>
+
+      </div>
+
+    </div>
+    <div class="chat_body chat_login">
+        <a id="chat_first_screen" class="fab"><i class="fa fa-mail-forward"></i></a>
+        <p>We make it simple and seamless for you and us to talk to each other. Ask us anything</p>
+    </div>
+    <div id="chat_converse" class="chat_conversion chat_converse">
+            <a id="chat_second_screen" class="fab"><i class="fa fa-mail-forward"></i></a>
+      <span class="chat_msg_item chat_msg_item_admin">
+           <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Hey there! Any question?</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Hello!</span>
+            <span class="status" style="color: black; ">20m ago</span>
+      <span class="chat_msg_item chat_msg_item_admin">
+           <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Hey! Would you like to talk editor, support, or anyone?</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+             <span class="status2" style="color: black; ">Just now. Not seen yet</span>
+    </div>
+    <div id="chat_body" class="chat_body">
+        <div class="chat_category">
+          <a id="chat_third_screen" class="fab"><i class="fa fa-mail-forward"></i></a>
+        <p>What would you like to talk about?</p>
+        <ul>
+          <li>Recipes</li>
+          <li class="active">Publish</li>
+          <li >Account</li>
+          <li>other</li>
+        </ul>
+        </div>
+
+    </div>
+    <div id="chat_form" class="chat_converse chat_form">
+    <a id="chat_fourth_screen" class="fab"><i class="fa fa-mail-forward"></i></a>
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Hey there! Any question?</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Hello!</span>
+            <span class="status" style="color: black">20m ago</span>
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Agent typically replies in a few hours. Don't miss their reply.
+            <div>
+              <br>
+              <form class="get-notified">
+                  <label for="chat_log_email">Get notified by email</label>
+                  <input id="chat_log_email" placeholder="Enter your email"/>
+                  <i class="zmdi zmdi-chevron-right"></i>
+              </form>
+            </div></span>
+
+        <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Send message to agent.
+            <div>
+              <form class="message_form">
+                  <input placeholder="Your email"/>
+                  <input placeholder="Technical issue"/>
+                  <textarea rows="4" placeholder="Your message"></textarea>
+                  <button>Send</button> 
+              </form>
+
+        </div></span>   
+    </div>
+      <div id="chat_fullscreen" class="chat_conversion chat_converse">
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Hey there! Any question?</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Hello!</span>
+            <div class="status">20m ago</div>
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Hey! Would you like to talk sales, support, or anyone?</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            Where can I get some?</span>
+      <span class="chat_msg_item chat_msg_item_admin">
+            <div>
+               <i class="fa fa-user-circle-o"></i>
+             </div>The standard chuck...</span>
+      <span class="chat_msg_item chat_msg_item_user">
+            There are many variations of passages of Lorem Ipsum available</span>
+            <div class="status2">Just now, Not seen yet</div>
+      <span class="chat_msg_item " >
+          <ul class="tags">
+            <li>Recipes</li>
+              <li>Account</li>
+          </ul>
+      </span>
+    </div>
+    <div class="fab_field">
+      <a id="fab_camera" class="fab"><i class="fa fa-camera"></i></a>
+      <a id="fab_send" class="fab"><i class="fa fa-paper-plane"></i></a>
+      <textarea id="chatSend" name="chat_message" placeholder="Send a message" class="chat_field chat_message"></textarea>
+    </div>
+  </div>
+    <a id="prime" class="fab"><i class="fa fa-comment-o"></i></a>
+</div>
+  <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+
+    <script src="js/index.js"></script>
+        
+    
+    <div>
+   <div class="subscribe" style="border: 1.5px solid black">
+	<p class="subscribe__copy" style="font-family: copperplate;">get the </p>
+       <h2 class="subscribe__title">latest recipe</h2>
+       <p class="subscribe__copy" style="font-family: copperplate;">right to you inbox </p>
+	<div class="form">
+		<input type="email" class="form__email" style="font-family: copperplate; color: black" placeholder="Enter your email address" />
+		<button class="form__button" style="border: none; background: none; font-family: dm serif display; font-size: 16px">Sign Up →</button>
+	</div>
+	<div class="notice">
+		<input type="checkbox" style="margin-right: -280px">
+		<span class="notice__copy" style="color: black; ">I agree to my email address being stored and uses to recieve monthly newsletter.</span>
+	</div>
+</div>
+    </div>
+  <footer class="footer">
+        <div>
+        <a href="#">Newsletter</a>
+         <a href="#">Subcribe</a>
+        <a href="#">Customer Service</a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        </div>
+    <h>2023 ©Halal It. Pt Ltd</h>
+       
+         <div>
+        <a href="#">PrivacyNotice</a>
+        </div>
+        
+    </footer>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+    hideChat(0);
+
+$('#prime').click(function() {
+  toggleFab();
+});
+
+
+//Toggle chat and links
+function toggleFab() {
+  $('.prime').toggleClass('zmdi-comment-outline');
+  $('.prime').toggleClass('zmdi-close');
+  $('.prime').toggleClass('is-active');
+  $('.prime').toggleClass('is-visible');
+  $('#prime').toggleClass('is-float');
+  $('.chat').toggleClass('is-visible');
+  $('.fab').toggleClass('is-visible');
+  
+}
+
+  $('#chat_first_screen').click(function(e) {
+        hideChat(1);
+  });
+
+  $('#chat_second_screen').click(function(e) {
+        hideChat(2);
+  });
+
+  $('#chat_third_screen').click(function(e) {
+        hideChat(3);
+  });
+
+  $('#chat_fourth_screen').click(function(e) {
+        hideChat(4);
+  });
+
+  $('#chat_fullscreen_loader').click(function(e) {
+      $('.fullscreen').toggleClass('zmdi-window-maximize');
+      $('.fullscreen').toggleClass('zmdi-window-restore');
+      $('.chat').toggleClass('chat_fullscreen');
+      $('.fab').toggleClass('is-hide');
+      $('.header_img').toggleClass('change_img');
+      $('.img_container').toggleClass('change_img');
+      $('.chat_header').toggleClass('chat_header2');
+      $('.fab_field').toggleClass('fab_field2');
+      $('.chat_converse').toggleClass('chat_converse2');
+      //$('#chat_converse').css('display', 'none');
+     // $('#chat_body').css('display', 'none');
+     // $('#chat_form').css('display', 'none');
+     // $('.chat_login').css('display', 'none');
+     // $('#chat_fullscreen').css('display', 'block');
+  });
+
+function hideChat(hide) {
+    switch (hide) {
+      case 0:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'block');
+            $('.chat_fullscreen_loader').css('display', 'none');
+             $('#chat_fullscreen').css('display', 'none');
+            break;
+      case 1:
+            $('#chat_converse').css('display', 'block');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 2:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'block');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 3:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'block');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            break;
+      case 4:
+            $('#chat_converse').css('display', 'none');
+            $('#chat_body').css('display', 'none');
+            $('#chat_form').css('display', 'none');
+            $('.chat_login').css('display', 'none');
+            $('.chat_fullscreen_loader').css('display', 'block');
+            $('#chat_fullscreen').css('display', 'block');
+            break;
+    }
+}
+</script>
+
+</body>
+</html>

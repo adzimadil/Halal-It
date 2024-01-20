@@ -1,0 +1,416 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Serif+Display&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+body {margin:0;font-family:'Rozha One';
+    background-image: url(https://sg.sodexo.com/files/live/sites/com-sg/files/Images/inspired%20thinking/food%20across%20cultures.png);
+    background-repeat: no-repeat;
+    background-size: cover;width: 100%; min-height: 100%}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  text-decoration: underline;
+  color: black;
+  opacity: 0.3;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+    
+    .topnav img {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    .search input[type=text] {
+  width: 200px;
+    height: 25px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    background: #EEEEEE;
+    border-radius: 7px;
+    border: none; 
+    margin-top: 10px;
+}
+
+
+.search input[type=text]:focus {
+  width: 40%;
+}
+    
+
+    
+      .footer {
+        width: 100%;
+clear: both;
+            position: relative;
+            height: 100px;
+          background-color: darkgray;
+        color: white;
+        text-align: center;
+        word-spacing: 5px;
+        line-height: 30px;
+        padding-top: 7px;
+        
+    }
+    
+    .footer h {font-size: 30px;
+    color: black;}
+    
+    .footer a{text-decoration: none;
+    color: ghostwhite;}
+    
+    .footer a:hover{color: black;}
+    
+    .footer .fa{
+        font-size: 20px;
+        width: 50px;
+        background: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        
+    }
+    
+     .footer .fa:hover{
+        color: white;
+        opacity: 0.3;
+    }
+    
+      .form-box{
+            width: 380px;
+            height: 480px;
+            position: relative;
+            margin: 6% auto;
+            background: whitesmoke;
+            padding: 5px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .button-box{
+            width 220px;
+            margin-left: 115px;
+            margin-top: 60px;
+            position: relative;
+            border-radius: 30px;
+            float: left;
+        
+        }
+    
+        .toggle-btn {
+            padding: 10px 10px;
+            background: transparent;
+            border:none;
+            font-size: 15px;
+            font-family: 'copperplate'
+        }
+        
+        .toggle-btn:hover{
+            background-color: lightgray;
+            color: whitesmoke;
+        }
+        
+        
+        #btn {
+            top:0;
+            left: 0;
+            position: absolute;
+            width: 11 0px;
+            height: 100%;
+            border-radius: 30px;
+            transition: .5s;
+        }
+
+        
+        .input-group{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: .5s;
+        }
+        
+        .input-field{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            outline: none;
+            background: transparent;
+            font-family: 'dm serif display';
+        }
+    form input[type=text]{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            outline: none;
+            background: transparent;
+            font-family: 'dm serif display';
+        
+    }
+        
+        .submit-btn{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: black;
+            border-radius: 30px;
+            color: whitesmoke;
+            border: none;
+        }
+        
+        .submit-btnhover {
+            background-color: lightgray;
+            color: black;
+        }
+        
+        
+        span{
+            color: black;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+
+        }
+        
+        #login {
+            left: 50px;
+        }
+        
+        #signin{
+            left: 450px;
+        }
+        
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src = "halal..png">
+    <hr>
+  <a href="index.html" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="document.location='categories.html'">Recipes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="korean.html">Korean Recipe</a>
+      <a href="italian.html">Italian recipe</a>
+      <a href="thai.html">Thai recipe</a>
+      <a href="spanish.html">Spanish Recipe</a>
+      <a href="mediterranean.html">Mediterranean recipe</a>
+      <a href="vietname.html">Vietnamese recipe</a>
+    </div>
+  </div> 
+
+  <a href="trending-now.html">Trending Now</a>
+  <a href="about-us.html">About Us</a>
+  <input type="text" name="search" placeholder="Search..">
+  <a href="account.html" style="float: right">Account</a>
+  <a href="FAQs.html" style="float: right">FAQs</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+ 
+
+      
+      
+      
+      
+      
+      
+      
+       <div class="hero">
+            <div class="form-box">
+                 <div class = "button-box">
+                     <div id="btn"></div>
+                  <button type="button" class="toggle-btn" onclick="login()">log in</button>
+                 <button type="button" class="toggle-btn" onclick="signin()">sign in</button>
+                </div>
+   
+            
+            <form id="login" class="input-group" style="margin-top: 35px">
+                <h2 style="margin-top:-50px; padding: 0">Log In</h2>
+            <input type="text" class="input-field" placeholder="user id" required>
+            <input type="password" class="input-field" placeholder="password" required>
+            <input type="checkbox" name="cb2" class="check-box" style="margin: 20px">
+                <label for="cb2">remember password</label>
+            <button type="submit" class="submit-btn">log in</button>
+            </form>
+                
+            <form id="signin" class="input-group">
+                <h2 style="margin-top:-50px; padding: 0">Sign In</h2>
+            <input type="text" class="input-field" placeholder="user id" required>
+            <input type="email" class="input-field" placeholder="email" required>
+            <input type="password" class="input-field" placeholder="password" required>
+            <input type="checkbox" name="cb" style="margin-top: 10px; margin-bottom: 30px">
+                <label for="cb">I agree to the terms and conditions</label>
+            <p style="text-align: center; font-size: 12px">read our <a href="#">terms & condition</a> here</p>
+            <button type="submit" class="submit-btn">sign in</button>
+            </form>
+                
+         </div>  
+        </div>
+      
+      
+      
+      
+      
+     <footer class="footer">
+        <div>
+        <a href="#">Newsletter</a>
+         <a href="#">Subcribe</a>
+        <a href="#">Customer Service</a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        </div>
+    <h>2023 ©Halal It. Pt Ltd</h>
+       
+         <div>
+        <a href="#">PrivacyNotice</a>
+        </div>
+        
+    </footer>
+<script>
+    
+    function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+            
+            var x= document.getElementById("login");
+            var y= document.getElementById("signin");
+            var z= document.getElementById("btn");
+
+            function signin(){
+                x.style.left="-400px";
+                y.style.left="50px";
+                z.style.left="110px";
+            }
+            
+            function login(){
+                x.style.left="50px";
+                y.style.left="450px";
+                z.style.left="0px";      
+            }
+    
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,514 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=DM+Serif+Display&family=Rozha+One&display=swap" rel="stylesheet">
+<style>
+body {margin:0;font-family:'Rozha One'; width: 100%; min-height: 100%}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: lightgrey;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  text-decoration: underline;
+  color: black;
+  opacity: 0.3;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+    
+    .topnav img {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+    input[type=text] {
+  width: 200px;
+    height: 25px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    background: #EEEEEE;
+    border-radius: 7px;
+    border: none; 
+    margin-top: 10px;
+}
+
+
+input[type=text]:focus {
+  width: 40%;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.pictures {
+  float: left;
+  width: 10%;
+  margin: 0 auto;
+  padding: 130px;
+}
+    
+      .footer {
+        width: 100%;
+        clear: both;
+            position: relative;
+            height: 100px;
+        background-color: darkgray;
+        color: white;
+        text-align: center;
+        word-spacing: 5px;
+        line-height: 30px;
+        padding-top: 7px;
+        
+    }
+    
+    .footer h {font-size: 30px;
+    color: black;}
+    
+    .footer a{text-decoration: none;
+    color: ghostwhite;}
+    
+    .footer a:hover{color: black;}
+    
+    .footer .fa{
+        font-size: 20px;
+        width: 50px;
+        background: black;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        
+    }
+    
+     .footer .fa:hover{
+        color: white;
+        opacity: 0.3;
+    }
+    
+    .column{
+        margin-right: 0px;
+        padding: 0px;
+    }
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 85%;
+}
+.container {
+  padding: 16px 0px;
+font-size: 17px;
+}
+
+.container::after, .row::after {
+  clear: both;
+  display: table;
+}
+
+.title {
+color: grey;
+font-size: 15px;
+font-weight: lighter;
+}
+
+    .card h2{
+        font-family: 'Cormorant Garamond'
+    }
+   
+.column {
+float: left;
+width: 20%;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;
+    margin-left: 250px;
+    margin-bottom: 50px}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    transform: translate(-27%)
+  }
+    .footer{
+        bottom: -6500;
+    }
+    
+    .row{
+        width: 50%;
+    }
+}
+    
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <img src = "halal..png">
+    <hr>
+  <a href="index.html" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="document.location='categories.html'">Recipes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="korean.html">Korean Recipe</a>
+      <a href="italian.html">Italian recipe</a>
+      <a href="thai.html">Thai recipe</a>
+      <a href="spanish.html">Spanish Recipe</a>
+      <a href="mediterranean.html">Mediterranean recipe</a>
+      <a href="vietname.html">Vietnamese recipe</a>
+    </div>
+  </div> 
+
+  <a href="trending-now.html">Trending Now</a>
+  <a href="about-us.html">About Us</a>
+  <input type="text" name="search" placeholder="Search..">
+  <a href="account.html" style="float: right">Account</a>
+  <a href="FAQs.html" style="float: right">FAQs</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<main>
+    <h1 style="font-family: 'Cormorant Garamond'
+"><center>
+        Our History
+    </center></h1>
+    <div class="content">
+        <p style="font-family: Copperplate;"><center>
+          We wanted to try out halal food for varies cuisines, but as we search for the cuisines we wanted to try, there was little to no halal restaurant that were up to standard and could compare with a non-halal restaurant. So we had this brillant idea to spread halal food 
+          to everyone on the internet and encouraging people to start their own halal restaurants. There was foods that we wanted to try but couldn't since it was non-halal and there wasnt a halal version of it available, that disappointed us so we started Halal It. This way people
+          could enjoy any type of foods. We have always grown up with halal food and not many people know what halal foods are so we wanted to share it with other people.
+        </center></p>
+
+        <h1 style="font-family: 'Cormorant Garamond'
+"><center>
+          Objectives
+        </center></h1>
+          <p style="font-family: Copperplate;"><center>
+            The main goal for us is to let people try halal food, spreading our love for halal food to others. We want people to know that they are many other ways to make things delicious so that anyone can also enjoy the food. We want to open the eyes of people to halal food, it is 
+            as delicious as normal food is but with different ingredients, may even more healthy than normal. Letting people know that halal food is not as hard as they thought it was to make, will allow more people and restaurants to try halal foods on their own menu, this will allow people 
+            to have more variety of delicious foods.
+          </center></p>
+        
+        <h1 style="font-family: 'Cormorant Garamond'
+"><center>
+          Why You Should Trust Us
+        </center></h1>
+          <p style="font-family: Copperplate;"><center>
+           We hand-pick every recipes that appears on Halal It with you in mind—and they're all tested, researched, or editor-approved. Our goal? As you know breaking the boundaries of non-Halal food and Muslim community as well as making it easy for you to find the best whatever you want and introduce you to the need-right-now products.
+          </center></p>
+        
+          <h1 style="font-family: 'Cormorant Garamond'
+"><center>
+Recipe Development & Testing
+              </center></h1>
+          <p style="font-family: Copperplate;"><center>
+           Our recipes primarily use fresh, unprocessed ingredients but we also believe there is a time and a place for canned, frozen, and other prepared ingredients. We start by hand-pick the recipe and study the subtitute for the non-halal ingredients. Our recipe developers team — people with experience and knowledge will later create both the non-halal and halal version of it. Our non-Muslim team members and editor will test them both and verify if the halal version taste aunthentic and is the same as the non-halal one in order to make sure we preserve it's originality.
+          </center></p>
+        </div>
+    <main>
+        
+    <h1 style="font-family: 'Cormorant Garamond'"><center>
+      Who We Are
+</center></h1>
+        
+       <h2 style="text-align: center;">Our Main People</h2>
+                             <hr style="width: 20%">
+         <p style="text-align: center; font-family: Cormorant Garamond; padding: 30px;">We're the one that make Halal It as it is today and the main vision behind our brand. Started as an idea back in 2023,  over the years, what started as a small blog grew to reach millions of readers every month. This small achievement are what make us committed to bringing you the recipes of your crave before anyone else does. Additionally, at Halal It, we aspire to provide the highest quality content produced by Muslim, for all.</p>
+        
+        <div class="row">
+ 
+                  <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/sarah-ceniceros-1658288584.png?crop=0.726xw:0.586xh;0.0629xw,0.0274xh&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Amirah Azman</h2>
+        <p class="title">CEO & Founder of Halal It.</p>
+      </div>
+    </div>
+  </div>
+        
+                 <div class="column" >
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/hbx-robertsexias-010-1634576087.jpg?crop=0.628xw:0.628xh;0.167xw,0&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Adzim Adil</h2>
+        <p class="title">Halal It Executive Editor</p>
+      </div>
+    </div>
+  </div>
+       
+        
+         
+      
+                <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/hdm-marcstauble-716-1673625991.jpg?crop=1xw:1xh;center,top&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container" style="padding: 5px">
+        <h2>Isaac Yap</h2>
+        <p class="title">Director of Content Operations</p>
+      </div>
+    </div>
+  </div>
+        
+              
+                 <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/vineet-1565198049.jpg?crop=0.658xw:0.658xh;0.146xw,0&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Ariffin</h2>
+        <p class="title">Editorial Business Manager</p>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+        
+      <h2 style="text-align: center;">People behind our recipe</h2>
+                 <hr style="width: 20%">
+         <p style="text-align: center; font-family: Cormorant Garamond;padding: 30px;">We're the small but mighty crew responsible for every single recipe that hits the site, plus all of the ones in our quarterly magazine, cookbooks, and special edition issues. We work out of two very cramped kitchens (#welcometonewyork) to develop, test, style, and shoot more than 50 recipes every month. Our backgrounds might be legit—culinary schools, restaurant kitchens—but we're not above boxed cake mixes and dinners inspired by our favorite chain restaurants. We're also incharge on making sure that our recipe in aunthetic and halal at the same time.</p>
+        
+        <div class="row">
+ 
+                 <div class="column">
+    <div class="card">
+      <img src="https://politics.princeton.edu/sites/default/files/styles/square/public/images/p-5.jpeg?h=87dbaab7&itok=ub6jAL5Q" alt="Jane" style="width:100%">
+      <div class="container" style="padding: 6px">
+        <h2>Muhd Bilal</h2>
+        <p class="title">Food Director & Senior Food Editor</p>
+      </div>
+    </div>
+  </div>
+          
+                 <div class="column" >
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Man_3.jpg/480px-Man_3.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Justin Sullivan</h2>
+        <p class="title">Deputy Recipe Editor</p>
+      </div>
+    </div>
+  </div>
+        
+                 <div class="column">
+    <div class="card">
+      <img src="https://media.kjzz.org/s3fs-public/styles/special_story_images_aspect_switcher/public/angelica-lindsey-ali-20220727.JPG?itok=wQLBKwsm" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Sarah Khadijah</h2>
+        <p class="title">Associate Food Producer</p>
+      </div>
+    </div>
+  </div>
+           
+                <div class="column">
+    <div class="card">
+      <img src="https://www.ef.org/wp-content/uploads/rosalind_jackson_crop-480x480.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jessica Musumeci</h2>
+        <p class="title">Digital Food Producer</p>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+        
+       <h2 style="text-align: center;">Our visual team</h2>
+                 <hr style="width: 20%">
+          <p style="text-align: center; font-family: Cormorant Garamond;padding: 30px;">This design team is the reason our photography, website, quarterly magazine, and cookbooks look so <i>damn good</i>. Everything you see on Halal It. and in our cookbooks is designed or hand-drawn and animated by us.</p>
+        
+        <div class="row">
+ 
+                               <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/hdm-carlosdominguez-999-1673587342.jpg?crop=1xw:1xh;center,top&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Philip Swift</h2>
+        <p class="title">Art Director</p>
+      </div>
+    </div>
+  </div>
+        
+           
+                 <div class="column" >
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/gabby-romero-1658287518.png?crop=0.849xw:0.655xh;0.0425xw,0&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Aminah Syarah</h2>
+        <p class="title">Senior Designer</p>
+      </div>
+    </div>
+  </div>
+            
+                 <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/rebecca-simpson-steele-095-rss-1675373662.jpg?crop=0.673xw:0.449xh;0.146xw,0.0238xh&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Rebecca Simpson</h2>
+        <p class="title">Visuals Director</p>
+      </div>
+    </div>
+  </div>
+    
+                <div class="column">
+    <div class="card">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/screen-shot-2022-07-19-at-11-50-14-pm-1658289027.png?crop=0.701195219123506xw:1xh;center,top&resize=640:*" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Puteri Nur Misha</h2>
+        <p class="title">Visuals Director
+
+</p>
+      </div>
+    </div>
+  </div>
+        </div>
+        
+</main>
+     
+     <footer class="footer">
+        <div>
+        <a href="#">Newsletter</a>
+         <a href="#">Subcribe</a>
+        <a href="#">Customer Service</a>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        </div>
+    <h>2023 ©Halal It. Pt Ltd</h>
+       
+         <div>
+        <a href="#">PrivacyNotice</a>
+        </div>
+        
+    </footer>
+    
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+</body>
+</html>
